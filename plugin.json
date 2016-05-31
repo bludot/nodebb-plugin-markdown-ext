@@ -5,13 +5,13 @@
     "url": "https://github.com/bludot/nodebb-plugin-markdown-ext",
     "library": "./index.js",
     "less": [
-        "public/less/default.less"
+        "static/style.less"
     ],
     "scripts": [
         "static/lib/main.js"
     ],
     "staticDirs": {
-        "styles": "public/styles"
+        "styles": "./static"
     },
     "languages": "public/languages",
     "defaultLang": "en_GB",
