@@ -1,7 +1,7 @@
-(function() {
+
     "use strict";
 
-    db = module.parent.require('./database'),
+    var db = module.parent.require('./database'),
         hotswap = module.parent.require('./hotswap');
 
     var nconf = module.parent.require('nconf'),
@@ -96,4 +96,3 @@
     };
 
     module.exports = Markdown_ext;
-}());
