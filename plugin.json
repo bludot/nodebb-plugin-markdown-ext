@@ -1,0 +1,36 @@
+{
+    "id": "nodebb-plugin-markdown-ext",
+    "name": "Markdown Ext Parser",
+    "description": "An extended Markdown parser for NodeBB",
+    "url": "https://github.com/bludot/nodebb-plugin-markdown-ext",
+    "library": "./index.js",
+    "less": [
+        "public/less/default.less"
+    ],
+    "scripts": [
+        "public/js/client.js"
+    ],
+    "acpScripts": [
+        "public/js/admin.js"
+    ],
+    "staticDirs": {
+        "styles": "public/styles",
+        "js": "public/js"
+    },
+    "languages": "public/languages",
+    "defaultLang": "en_GB",
+    "templates": "./templates",
+    "hooks": [
+        { "hook": "filter:post.parse", "method": "parse", "priority": 6 },
+        { "hook": "filter:admin.header.build", "method": "admin.menu" },
+        {
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:hotswap.prepare", "method": "prepare"
+		},
+		{
+			"hook": "filter:header.build", "method": "addNavigation"
+		}
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nodebb-plugin-markdown-ext",
+  "version": "1.0.0",
+  "description": "A Markdown parser for NodeBB",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bludot/nodebb-plugin-markdown-ext"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "markdown"
+  ],
+  "author": "bludot <admin@bludotos.com>",
+  "bugs": {
+    "url": "https://github.com/bludot/nodebb-plugin-markdown-ext/issues"
+  },
+  "dependencies": {
+
+  },
+  "nbbpm": {
+    "compatibility": "^1.0.0"
+  }
+}
