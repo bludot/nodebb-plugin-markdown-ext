@@ -11,8 +11,7 @@
         "public/js/client.js"
     ],
     "staticDirs": {
-        "styles": "public/styles",
-        "js": "public/js"
+        "styles": "public/styles"
     },
     "languages": "public/languages",
     "defaultLang": "en_GB",
