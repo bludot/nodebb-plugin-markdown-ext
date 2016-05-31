@@ -10,9 +10,6 @@
     "scripts": [
         "public/js/client.js"
     ],
-    "acpScripts": [
-        "public/js/admin.js"
-    ],
     "staticDirs": {
         "styles": "public/styles",
         "js": "public/js"

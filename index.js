@@ -66,7 +66,15 @@
                 });
             }
         },
-		
+		addAdminNavigation = function(header, callback) {
+	header.plugins.push({
+		route: '/admin-page',
+		icon: 'fa-mobile',
+		name: 'markdown-ext'
+	});
+
+	callback(null, header);
+},
         admin: {
             menu: function(custom_header, callback) {
                 custom_header.plugins.push({
