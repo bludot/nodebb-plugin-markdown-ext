@@ -66,12 +66,13 @@
                 });
             }
         },
+		
         admin: {
             menu: function(custom_header, callback) {
                 custom_header.plugins.push({
                     "route": '/admin-page',
                     "icon": 'fa-edit',
-                    "name": 'Markdown'
+                    "name": 'Markdown-ext'
                 });
 
                 callback(null, custom_header);
