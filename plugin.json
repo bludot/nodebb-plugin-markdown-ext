@@ -8,7 +8,7 @@
         "public/less/default.less"
     ],
     "scripts": [
-        "public/js/client.js"
+        "static/lib/main.js"
     ],
     "staticDirs": {
         "styles": "public/styles"
