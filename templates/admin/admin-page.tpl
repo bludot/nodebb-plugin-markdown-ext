@@ -1,14 +1,13 @@
 <div class="row">
-    <div class="col-sm-2 col-xs-12 settings-header">Active Routes</div>
+    <div class="col-sm-2 col-xs-12 settings-header">Marks:</div>
     <div class="col-sm-10 col-xs-12">
         <p class="lead">
-            Define and customise your new routes here.
+            Define and customise your markdown codes
         </p>
         <p>
-            Once restarted, you will be able to add content to your new routes from <a href="{config.relative_path}/admin/extend/widgets">Extend &rarr; Widgets</a>.
+            use "\" in your regex. it is put in as <code>new RegExp(regex)</code>
         </p>
-        <p>
-            By default, your routes are only accessible if you know the URL. You can add your new route to the site navigation from <a href="{config.relative_path}/admin/general/navigation">General &rarr; Navigation</a>
+            <p>
         <div id="marks">
             <!-- BEGIN marks -->
             <div class="well">
@@ -20,7 +19,10 @@
                     </label>
 
                     <label>regex
-                    <input type="text" class="form-control" name="route" value="{pages.regex}" />
+                    <input type="text" class="form-control" name="route" value="{marks.regex}" />
+                    </label>
+                    <label>Replacement
+                    <input type="text" class="form-control" name="replacement" value="{marks.replacement}" />
                     </label>
                 </form>
             </div>
@@ -39,6 +41,9 @@
 
         <label>regex
         <input type="text" class="form-control" name="regex" value="" />
+        </label>
+        <label>Replacement
+        <input type="text" class="form-control" name="replacement" value="" />
         </label>
     </form>
 </div>
@@ -68,13 +73,14 @@
             if (data[1].value && !data[1].value.match(' ') && data[1].value !== '') {
                 arr.push({
                     name: data[0].value,
-                    regex: data[1].value
+                    regex: encodeURIComponent(data[1].value),
+                    replacement: encodeURIComponent(data[2].value)
                 });
             }
 
         });
         socket.emit('admin.settings.saveMarks', arr, function() {
-            app.alertSuccess('Custom pages saved and activated');
+            app.alertSuccess('Custom marks saved and activated');
         });
     });
 </script>
