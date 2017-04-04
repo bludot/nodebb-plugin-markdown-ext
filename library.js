@@ -340,7 +340,7 @@ var Markdown_ext = {
             .replace(/<blockquote><div>\s*<\/blockquote>/g, '');*/
 		getMarks(function(err, data) {
 			for(var i in data) {
-				var re = new RegExp(decodeHtmlEntity(data[i].regex));
+				var re = new RegExp(decodeHtmlEntity(data[i].regex), 'g');
 				var str = HtmlEntities.decode(pdata.postData.content);
 				var subst = decodeHtmlEntity(data[i].replacement);//'<span style="color:$1;">$2</span>';
 				pdata.postData.content = str.replace(re, subst);
