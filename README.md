@@ -15,8 +15,8 @@ ex:
 | RegExp:                             | Replacement text:                          |
 | :---------------------------------: | :----------------------------------------: |
 | `\[color="(.+?)"\](.+?)\[\/color\]` | `<span style="color:$1;">$2</span>`        |
-| `[\ ]`                              | `<input type="checkbox" />`                |
-| `[x]`                               | `<input type="checkbox" checked="true" />` |
+| `\[\ \]`                            | `<input type="checkbox" />`                |
+| `\[x\]`                             | `<input type="checkbox" checked="true" />` |
 
 
 Installation
